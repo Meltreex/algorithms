@@ -54,3 +54,41 @@ students_list = [
     {"name": "Jane", "class": "A", "grade": 21}  
 ]
 ```
+
+Алгоритм  занимает меньше места, чем массив данных.
+```
+def quicksort(array):  
+    if len(array) < 2:  
+        return array  
+    else:  
+        pivot = array[0]  
+        left_subarray = [i for i in array[1:] if i["grade"] <= pivot["grade"]]  
+        right_subarray = [j for j in array[1:] if j["grade"] > pivot["grade"]]  
+  
+    return quicksort(left_subarray) + [pivot] + quicksort(right_subarray)  
+  
+print(quicksort(students_list))
+```
+Разберем подробнее. 
+```
+if len(array) < 2:  
+        return array 
+```
+Это условие возвращает базовый случай, если он определен. То есть, если наш массив  меньше двух элементов, то массив состоит из одного элемента и не нуждается в сортировке. 
+```
+else:  
+        pivot = array[0]  
+        left_subarray = [i for i in array[1:] if i["grade"] <= pivot["grade"]]  
+        right_subarray = [j for j in array[1:] if j["grade"] > pivot["grade"]]  
+  
+```
+Главный блок, который выполняет всю логику. 
+Выбираем опорный элемент - `pivot`, берем первый элемент массива. Подразделяем на два подмассива - `left_subarray` и `right_subarray`, которые являются списковым включением. 
+
+Логика в списковом включении. 
+Цикл итерирует наш массив данных без первого элемента, так как мы его определили опорным. Далее идет условие, которое сравнивает оценку взятого n элемента с опорным элементом. Если n элемент меньше, то определяется в `left_subarray`
+подмассив, если больше, то в `right_subarray` подмассив. 
+
+### Заключение
+
+Быстрая сортировка - это алгоритм, который требуется изучить, когда мы говорим о алгоритмах.
