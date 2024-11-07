@@ -1,5 +1,5 @@
 # algorithms
 
 Этот репозиторий посвящен алгоритмам. Цель этого хранилища - предоставить четкие и практичные объяснения, а также реализации кода на Python, чтобы помочь другим лучше понять эти фундаментальные концепции. 
-
-[Быстрая сортировка](https://github.com/Meltreex/algorithms/tree/main/Quick%20Sort)
+ 
+ - [Быстрая сортировка](https://github.com/Meltreex/algorithms/tree/main/Quick%20Sort)
